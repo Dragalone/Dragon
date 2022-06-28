@@ -88,7 +88,7 @@ void InputHandler::onMouseMove(SDL_Event& event)
     m_mousePosition->setX(event.motion.x);
     m_mousePosition->setY(event.motion.y);
 }
-// KEYBORD???
+
 void InputHandler::onKeyDown()
 {
     m_keystates = SDL_GetKeyboardState(nullptr);
@@ -117,4 +117,20 @@ bool InputHandler::isKeyDown(SDL_Scancode key)
 
     return false;
 }
-// KEYBORD???
+
+bool InputHandler::isKeyUp(SDL_Scancode key)
+{
+    if(m_keystates != nullptr)
+    {
+        if(m_keystates[key] == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    return false;
+}
