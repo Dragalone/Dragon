@@ -134,3 +134,11 @@ bool InputHandler::isKeyUp(SDL_Scancode key)
 
     return false;
 }
+
+void InputHandler::reset()
+{
+    for(int i = 0; i < 3; i++)
+    {
+        m_mouseButtonStates[i] = false;
+    }
+}

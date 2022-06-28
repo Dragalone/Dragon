@@ -137,6 +137,14 @@ build CMakeFiles\DragonGame.dir\MenuButton.cpp.obj: CXX_COMPILER__DragonGame_Deb
   TARGET_COMPILE_PDB = CMakeFiles\DragonGame.dir\
   TARGET_PDB = DragonGame.pdb
 
+build CMakeFiles\DragonGame.dir\PauseState.cpp.obj: CXX_COMPILER__DragonGame_Debug C$:\Users\user\CLionProjects\SdlTest\PauseState.cpp || cmake_object_order_depends_target_DragonGame
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
+  INCLUDES = -IC:\SDL2_ttf\include -IC:\SDL2\include -IC:\SDL2_image\include
+  OBJECT_DIR = CMakeFiles\DragonGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\DragonGame.dir
+  TARGET_COMPILE_PDB = CMakeFiles\DragonGame.dir\
+  TARGET_PDB = DragonGame.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DragonGame
@@ -145,7 +153,7 @@ build CMakeFiles\DragonGame.dir\MenuButton.cpp.obj: CXX_COMPILER__DragonGame_Deb
 #############################################
 # Link the executable DragonGame.exe
 
-build DragonGame.exe: CXX_EXECUTABLE_LINKER__DragonGame_Debug CMakeFiles\DragonGame.dir\main.cpp.obj CMakeFiles\DragonGame.dir\Game.cpp.obj CMakeFiles\DragonGame.dir\TextureManager.cpp.obj CMakeFiles\DragonGame.dir\Player.cpp.obj CMakeFiles\DragonGame.dir\Buildings.cpp.obj CMakeFiles\DragonGame.dir\SDLGameObject.cpp.obj CMakeFiles\DragonGame.dir\InputHandler.cpp.obj CMakeFiles\DragonGame.dir\MenuState.cpp.obj CMakeFiles\DragonGame.dir\PlayState.cpp.obj CMakeFiles\DragonGame.dir\GameStateMachine.cpp.obj CMakeFiles\DragonGame.dir\MenuButton.cpp.obj
+build DragonGame.exe: CXX_EXECUTABLE_LINKER__DragonGame_Debug CMakeFiles\DragonGame.dir\main.cpp.obj CMakeFiles\DragonGame.dir\Game.cpp.obj CMakeFiles\DragonGame.dir\TextureManager.cpp.obj CMakeFiles\DragonGame.dir\Player.cpp.obj CMakeFiles\DragonGame.dir\Buildings.cpp.obj CMakeFiles\DragonGame.dir\SDLGameObject.cpp.obj CMakeFiles\DragonGame.dir\InputHandler.cpp.obj CMakeFiles\DragonGame.dir\MenuState.cpp.obj CMakeFiles\DragonGame.dir\PlayState.cpp.obj CMakeFiles\DragonGame.dir\GameStateMachine.cpp.obj CMakeFiles\DragonGame.dir\MenuButton.cpp.obj CMakeFiles\DragonGame.dir\PauseState.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = SDL2main.lib  SDL2.lib  SDL2test.lib  SDL2_ttf.lib  SDL2_image.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

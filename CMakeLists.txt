@@ -19,6 +19,6 @@ link_directories(${SDL2_LIB_DIR2})
 link_directories(${SDL2_LIB_DIR})
 link_directories(${SDL2_LIB_DIR4})
 
-add_executable(DragonGame main.cpp Game.cpp Game.h TextureManager.cpp TextureManager.h GameObject.h Player.cpp Player.h Buildings.cpp Buildings.h LoaderParams.h SDLGameObject.cpp SDLGameObject.h Vector2D.h InputHandler.cpp InputHandler.h GameState.h MenuState.cpp MenuState.h PlayState.cpp PlayState.h GameStateMachine.cpp GameStateMachine.h MenuButton.cpp MenuButton.h)
+add_executable(DragonGame main.cpp Game.cpp Game.h TextureManager.cpp TextureManager.h GameObject.h Player.cpp Player.h Buildings.cpp Buildings.h LoaderParams.h SDLGameObject.cpp SDLGameObject.h Vector2D.h InputHandler.cpp InputHandler.h GameState.h MenuState.cpp MenuState.h PlayState.cpp PlayState.h GameStateMachine.cpp GameStateMachine.h MenuButton.cpp MenuButton.h PauseState.cpp PauseState.h)
 
 target_link_libraries(${PROJECT_NAME} SDL2main SDL2 SDL2test SDL2_ttf SDL2_image)
