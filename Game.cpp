@@ -58,12 +58,17 @@ bool Game::init(const char* title, int xpos, int ypos, int width,
         std::cout << "SDL init fail\n";
         return false; // SDL init fail
     }
+    if (TTF_Init()!=0){
+        std::cout << "SDL TTF fail\n";
+        system("pause");
+        return false;
+    }
     std::cout << "init success\n";
     m_bRunning = true; // everything inited successfully, start the main loop
     TextureManager::Instance()->load("res/Screen.png", "screen", m_pRenderer);
     SDL_RenderCopy(m_pRenderer,TextureManager::Instance()->m_textureMap["screen"],nullptr, nullptr);
     SDL_RenderPresent(m_pRenderer);
-    SDL_Delay(5000);
+    SDL_Delay(100);
     TextureManager::Instance()->clearFromTextureMap("screen");
     TextureManager::Instance()->load("res/orig.gif", "background", m_pRenderer);
     TextureManager::Instance()->load("res/Help.png", "help", m_pRenderer);

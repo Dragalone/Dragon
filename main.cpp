@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
     Uint32 frameStart, frameTime;
     AllocConsole();
     freopen("CON","w", stdout);
-    if(Game::Instance()->init("DragonGame", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,  1960, 1080, 1)){
+    if(Game::Instance()->init("DragonGame", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,  1920, 1080, 1)){
         while(Game::Instance()->running())
         {
             frameStart = SDL_GetTicks();

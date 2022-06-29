@@ -1,11 +1,8 @@
-//
-// Created by vovak on 27.06.2022.
-//
-
 #ifndef TEST_PLAYSTATE_H
 #define TEST_PLAYSTATE_H
 
 #include <vector>
+#include "SDL.h"
 #include "GameState.h"
 
 class GameObject;
@@ -27,6 +24,7 @@ private:
 
     static const std::string s_playID;
     std::vector<GameObject*> m_gameObjects;
+    SDL_Texture *score, *time;
 };
 
 #endif //TEST_PLAYSTATE_H

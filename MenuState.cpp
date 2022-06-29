@@ -36,17 +36,23 @@ bool MenuState::onEnter()
     {
         return false;
     }
-    if(!TextureManager::Instance()->load("res/help_button1.png", "helpbutton", Game::Instance()->getRenderer()))
+    if(!TextureManager::Instance()->load("res/help_button.png", "helpbutton", Game::Instance()->getRenderer()))
     {
         return false;
     }
-    GameObject* button1 = new MenuButton(new LoaderParams(780, 300, 400, 100, "playbutton"), s_menuToPlay);
-    GameObject* button2 = new MenuButton(new LoaderParams(780, 700, 400, 100, "exitbutton"),  s_exitFromMenu);
-    GameObject* button3 = new MenuButton(new LoaderParams(780, 500, 400, 100, "helpbutton"),  s_help);
+    if(!TextureManager::Instance()->load("res/records_button1.png", "recordsbutton", Game::Instance()->getRenderer()))
+    {
+        return false;
+    }
+    GameObject* button1 = new MenuButton(new LoaderParams(780, 200, 400, 100, "playbutton"), s_menuToPlay);
+    GameObject* button2 = new MenuButton(new LoaderParams(780, 800, 400, 100, "exitbutton"),  s_exitFromMenu);
+    GameObject* button3 = new MenuButton(new LoaderParams(780, 400, 400, 100, "helpbutton"),  s_help);
+    GameObject* button4 = new MenuButton(new LoaderParams(780, 600, 400, 100, "recordsbutton"),  s_help);
 
     m_gameObjects.push_back(button1);
     m_gameObjects.push_back(button2);
     m_gameObjects.push_back(button3);
+    m_gameObjects.push_back(button4);
     std::cout << "entering MenuState\n";
     return true;
 }
@@ -61,6 +67,7 @@ bool MenuState::onExit()
     TextureManager::Instance()->clearFromTextureMap("playbutton");
     TextureManager::Instance()->clearFromTextureMap("exitbutton");
     TextureManager::Instance()->clearFromTextureMap("helpbutton");
+    TextureManager::Instance()->clearFromTextureMap("recordsbutton");
     std::cout << "exiting MenuState\n";
     return true;
 }

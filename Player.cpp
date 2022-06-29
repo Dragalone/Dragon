@@ -24,20 +24,20 @@ void Player::handleInput()
 
     if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_D))
     {
-        m_velocity.setX(6);
+        m_velocity.setX(9);
     }
     if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_A))
     {
-        m_velocity.setX(-6);
+        m_velocity.setX(-9);
 
     }
     if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_W))
     {
-        m_velocity.setY(-6);
+        m_velocity.setY(-12);
     }
     if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_S))
     {
-        m_velocity.setY(6);
+        m_velocity.setY(12);
     }
 
     if(InputHandler::Instance()->isKeyUp(SDL_SCANCODE_D))
@@ -66,6 +66,6 @@ void Player::handleInput()
         m_position.setY(930);
     if (m_position.getX()<0)
         m_position.setX(0);
-    if (m_position.getX()>1460)
-        m_position.setX(1460);
+    if (m_position.getX()>1420)
+        m_position.setX(1420);
 }

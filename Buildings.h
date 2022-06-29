@@ -3,6 +3,7 @@
 #include "SDLGameObject.h"
 
 class Buildings : public SDLGameObject {
+public:
     Buildings(const LoaderParams* pParams);
     virtual void draw();
     virtual void update();
