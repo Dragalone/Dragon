@@ -77,5 +77,6 @@ void PauseState::s_pauseToMain()
 
 void PauseState::s_resumePlay()
 {
+    Timer::Instance()->unpause();
     Game::Instance()->getStateMachine()->popState();
 }
