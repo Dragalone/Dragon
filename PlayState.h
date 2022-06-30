@@ -4,6 +4,7 @@
 #include <vector>
 #include "SDL.h"
 #include "GameState.h"
+#include "Timer.h"
 
 class GameObject;
 class SDLGameObject;
@@ -11,7 +12,6 @@ class SDLGameObject;
 class PlayState : public GameState
 {
 public:
-
     virtual void update();
     virtual void render();
 

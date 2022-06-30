@@ -1,5 +1,6 @@
 #include "GameStateMachine.h"
 
+
 void GameStateMachine::pushState(GameState *pState)
 {
     m_gameStates.push_back(pState);
@@ -39,6 +40,7 @@ void GameStateMachine::changeState(GameState* pState)
 
     // initialise it
     m_gameStates.back()->onEnter();
+
 }
 
 void GameStateMachine::update()

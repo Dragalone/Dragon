@@ -29,6 +29,11 @@ void PlayState::render()
     {
         m_gameObjects[i]->draw();
     }
+    SDL_Color color = { 255, 255, 255, 255 };
+
+    std::string s ="Time: " + std::to_string(Timer::Instance()->getTicks());
+    time = FontManager::Instance()->renderText(s, "res/ComicSansMS.ttf",
+                                color, 60, Game::Instance()->getRenderer());
     FontManager::Instance()->renderTexture(time,Game::Instance()->getRenderer(),1550,50);
     FontManager::Instance()->renderTexture(score,Game::Instance()->getRenderer(),60,50);
 }
@@ -52,6 +57,8 @@ bool PlayState::onEnter()
                       color, 60, Game::Instance()->getRenderer());
     score = FontManager::Instance()->renderText("Score: 1000", "res/ComicSansMS.ttf",
                                                color, 60, Game::Instance()->getRenderer());
+    Timer::Instance()->start();
+
     return true;
 }
 

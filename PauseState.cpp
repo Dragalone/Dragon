@@ -4,8 +4,7 @@
 
 #include "PauseState.h"
 #include <iostream>
-
-#include "PauseState.h"
+#include "Timer.h"
 #include "TextureManager.h"
 #include "InputHandler.h"
 #include "Game.h"
@@ -33,6 +32,7 @@ void PauseState::render()
 
 bool PauseState::onEnter()
 {
+    Timer::Instance()->pause();
     if(!TextureManager::Instance()->load("res/resume_button.png", "resumebutton", Game::Instance()->getRenderer()))
     {
         return false;

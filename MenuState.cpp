@@ -27,6 +27,7 @@ void MenuState::render()
 
 bool MenuState::onEnter()
 {
+    Timer::Instance()->stop();
     if(!TextureManager::Instance()->load("res/play_button.png", "playbutton", Game::Instance()->getRenderer()))
     {
         return false;
